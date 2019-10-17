@@ -1,5 +1,5 @@
 {% set name = "qsymm" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.4" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9a0999f07ecff89662cf77d281d82a0564ac3e353feb9c026dd7f92d21c5e588
+  sha256: 8c12d0fca9a45d79d23d4061c29f90aac4e25b66612a5ac56add07e512a2833a
 
 build:
   noarch: python
