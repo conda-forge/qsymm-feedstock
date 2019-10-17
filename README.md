@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About qsymm
 ===========
 
@@ -18,8 +14,15 @@ Summary: Symmetry finder and symmetric Hamiltonian generator
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/qsymm-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/qsymm-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6214&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qsymm-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -113,5 +116,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@dvarjas](https://github.com/dvarjas/)
 * [@jbweston](https://github.com/jbweston/)
+* [@torosdahl](https://github.com/torosdahl/)
 
