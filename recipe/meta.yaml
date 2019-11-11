@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.5
+    - pytest-runner
   run:
     - numpy >=1.13
     - python >=3.5
