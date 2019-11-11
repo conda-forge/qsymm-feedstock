@@ -1,5 +1,5 @@
 {% set name = "qsymm" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c12d0fca9a45d79d23d4061c29f90aac4e25b66612a5ac56add07e512a2833a
+  sha256: e804e054130342a1eb9fe2474cec70ecb968225a55d066d4a337557aa44bd932
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
     - pip
     - python >=3.5
+    - pytest-runner
   run:
     - numpy >=1.13
     - python >=3.5
