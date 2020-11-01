@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://gitlab.kwant-project.org/qt/qsymm
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Symmetry finder and symmetric Hamiltonian generator
@@ -47,3 +47,4 @@ extra:
     - jbweston
     - dvarjas
     - torosdahl
+    - akhmerov
