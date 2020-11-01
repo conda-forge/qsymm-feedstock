@@ -3,13 +3,11 @@ About qsymm
 
 Home: https://gitlab.kwant-project.org/qt/qsymm
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qsymm-feedstock/blob/master/LICENSE.txt)
 
 Summary: Symmetry finder and symmetric Hamiltonian generator
-
-
 
 Current build status
 ====================
@@ -116,6 +114,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@akhmerov](https://github.com/akhmerov/)
 * [@dvarjas](https://github.com/dvarjas/)
 * [@jbweston](https://github.com/jbweston/)
 * [@torosdahl](https://github.com/torosdahl/)
