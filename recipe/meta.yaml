@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
     - pytest-runner
   run:
-    - numpy >=1.13
-    - python >=3.5
-    - scipy >=0.19
-    - sympy >=1.1
+    - numpy >=1.16
+    - python >=3.7
+    - scipy >=1.1
+    - sympy >=1.3
     - tinyarray
 
 test:
