@@ -29,6 +29,7 @@ requirements:
 test:
   requires:
     - pytest
+    - setuptools
   imports:
     - qsymm
     - qsymm.tests
