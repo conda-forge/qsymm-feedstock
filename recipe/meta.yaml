@@ -1,34 +1,35 @@
 {% set name = "qsymm" %}
-{% set version = "1.2.7" %}
+{% set version = "1.3.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9af92a30c3f72883c744d4717e4ec30c8b48121e208c10553e8e0e428fe43bbc
+  sha256: ce72945b4d88b453b6d5ca2d222ffbf59b4adc38b32af5e601ca7321a550dbef
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
     - pytest-runner
   run:
-    - numpy >=1.13
-    - python >=3.5
-    - scipy >=0.19
-    - sympy >=1.1
+    - numpy >=1.16
+    - python >=3.7
+    - scipy >=1.1
+    - sympy >=1.3
     - tinyarray
 
 test:
   requires:
     - pytest
+    - setuptools
   imports:
     - qsymm
     - qsymm.tests
