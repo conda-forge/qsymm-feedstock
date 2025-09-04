@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  name: qsymm
+  version: 1.4.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 3920e49207f597cb41706b97a15e832c342ebbbfc3d0e20207cd7318ad205221
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - pytest-runner
+  run:
+    - numpy >=1.16.2
+    - python >=${{ python_min }}
+    - scipy >=1.1
+    - sympy >=1.3
+    - tinyarray >=1.2.2
+
+tests:
+  - python:
+      imports:
+        - qsymm
+        - qsymm.tests
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pytest
+        - setuptools
+        - python ${{ python_min }}.*
+    script:
+      - py.test --pyargs qsymm
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Symmetry finder and symmetric Hamiltonian generator
+  homepage: https://gitlab.kwant-project.org/qt/qsymm
+
+extra:
+  recipe-maintainers:
+    - jbweston
+    - dvarjas
+    - torosdahl
+    - akhmerov
